@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="custumer.master.cs" Inherits="aggarwal.custumer" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .menu {
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="header">
+                <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+
+                    <ContentTemplate>
+
+                        <asp:Timer ID="Timer1" runat="server" Interval="2000" OnTick="Timer1_Tick"></asp:Timer>
+
+                        <asp:Image ID="Image1" runat="server" Height="314px"  Width="1400px" BackColor="Black" BorderColor="Silver" BorderStyle="Double" />
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+                <%--<asp:Image ID="Image1" runat="server" Height="477px" ImageUrl="~/img/images.jfif" Width="1377px" />--%>
+
+            </div>
+
+            <div class="menu" style="font-family: 'Arial Rounded MT Bold'; background-color: #FF0000; font-weight: bolder; font-size: inherit;">
+                <asp:LinkButton ID="LinkButton1" runat="server" ForeColor="Black" style="font-weight: 700" Font-Size="Larger">HOME</asp:LinkButton>
+                &nbsp;&nbsp;&nbsp;
+                |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:LinkButton ID="LinkButton2" runat="server" ForeColor="Black" style="font-weight: 700" Font-Size="Larger">ABOUT US</asp:LinkButton>
+                &nbsp;&nbsp;&nbsp;
+                |&nbsp;
+                <asp:LinkButton ID="LinkButton3" runat="server" ForeColor="Black" style="font-weight: 700" Font-Size="Larger" OnClick="LinkButton3_Click">REGISTRATION</asp:LinkButton>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                |&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:LinkButton ID="LinkButton4" runat="server" ForeColor="Black" style="font-weight: 700" Font-Size="Larger" OnClick="LinkButton4_Click">LOGIN</asp:LinkButton>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:LinkButton ID="LinkButton5" runat="server" ForeColor="Black" style="font-weight: 700" Font-Size="Larger">CONTACT US</asp:LinkButton>
+
+            </div>
+
+            <div class="content">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            </div>
+
+            <div class="footer">
+
+
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>

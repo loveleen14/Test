@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="aggarwal.admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <asp:Image ID="Image1" runat="server" Height="367px" ImageUrl="~/img/download (3).jfif" Width="1557px" />
+
+            </div>
+        <div class="menu">
+
+
+            <asp:LinkButton ID="LinkButton1" runat="server">HOME</asp:LinkButton>
+            |&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:LinkButton ID="LinkButton2" runat="server">ADD PRODUCT</asp:LinkButton>
+            |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:LinkButton ID="LinkButton3" runat="server">LOGIN</asp:LinkButton>
+            |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:LinkButton ID="LinkButton4" runat="server">LOGOUT</asp:LinkButton>
+        </div>
+        <div class="content">
+
+             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            </div>
+           
+        <div class="footer">
+            <h3 class="auto-style1">@AGGARWALFOODS.COM</h3>
+        </div>
+    </form>
+</body>
+</html>
